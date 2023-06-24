@@ -14,9 +14,6 @@ public class NameInterfaceImpl implements NameInterface {
         String brother = "Айнур";
         String mother = "Рауза";
         String father = "Ахсан";
-        if (!yourName.equals(denny)) {
-            throw new WrongPersonException("Wrong name");
-        }
         if (yourName.equals(brother)) {
             throw new Brother("Айнур");
         }
@@ -25,6 +22,9 @@ public class NameInterfaceImpl implements NameInterface {
         }
         if (yourName.equals(father)) {
             throw new Father("Ахсан");
+        }
+        if (!yourName.equals(denny)) {
+            throw new WrongPersonException("Wrong name");
         }
         return yourName;
     }
